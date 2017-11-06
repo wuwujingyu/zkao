@@ -1,0 +1,60 @@
+*{margin:0;padding:0;list-style:none;}
+.box{
+    width:320px;height:640px;border:solid 1px #ccc;margin:0 auto;background: #eee;overflow-x:hidden;
+}
+.main{
+    width:100%;height:100%;
+}
+.header{
+    width: 100%;height:45px;background: #fff;
+}
+.header a{
+    float: left;
+    width:33%;line-height: 45px;
+}
+.top{
+    width: 100%;background: #fff;
+}
+.top ul{
+    width: 100%;height:120px;
+}
+.top ul li{
+    width: 23%;height:120px;background:#F8F8F8;float: left;margin-left:2%;text-align:center;
+}
+.top ul li img{
+    width:50%;height:70px;margin:10px 0 0 0;
+}
+.top ul li p{
+    font-size: 14px;text-align:center;color:#999;
+}
+.top ul li h6{
+    font-size: 16px;color:#666;text-align:center;font-weight:none;
+}
+.down:before{
+    width: 100%;height:10px;
+}
+.down{
+    width: 100%;margin-top:10px;background: #fff;
+}
+.ols{
+    width: 100%;height:300px;background: #fff;
+}
+.ols li{
+    border: solid 1px #ccc;width: 24%;height:100px;float: left;text-align: center;
+}
+.ols li img{
+    width:40%;height:50px;
+}
+.ols li p{
+    font-size: 14px;line-height: 30px;
+}
+
+.ols li:nth-child(6){
+    width:48%;
+}
+.ols li:nth-child(6) img{
+    width:100%;height: 100px;
+}
+.all img{
+    width:100%;height:120px;margin:10px;display: block;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="main">
+            <header class="header">
+                <a>北京市</a>
+                <a><img src="img/h2.png" alt=""></a>
+                <a><img src="img/h1.png" alt=""></a>
+            </header>
+            <div class="top">
+                <ul class="uls">
+                </ul>
+            </div>
+            <div class="down">
+                <ol class="ols">
+                </ol>
+            </div>
+            <p class="all"><img src="img/big.png" alt=""></p>
+        </div>
+        
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $.ajax({
+            url:'http://localhost:9999/getdata',
+            success:function(data){
+                var str='';
+                var dstr='';
+                var dnstr='';
+                var obj = JSON.parse(data)
+                obj.top.forEach(function(file){
+                    str+=`<li><img src="${file.timg}"/><h6>${file.tt}</h6><p>${file.td}</p></li>`;
+                })
+                $('.uls').html(str);
+                obj.down1.forEach(function(ff){
+                    dstr+=`<li><img src="${ff.dimg}"/><p>${ff.pp}</p></li>`;
+                })
+                obj.down2.forEach(function(fs){
+                    dstr+=`<li class='te'><img src="${fs.dimg}"/><p>${fs.pp}</p></li>`;
+                })
+                obj.down3.forEach(function(fc){
+                    dstr+=`<li><img src="${fc.mimg}"/><p>${fc.pp}</p></li>`;
+                })
+                $('.ols').html(dstr);
+            }
+        })
+    </script>
+</body>
+</html>
